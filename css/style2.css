@@ -1,0 +1,26 @@
+.logotienda img{
+	border: 2px dotted orange;
+	border-radius: 60%;
+	}
+	
+	.ttienda{
+		<!-font-family: 'Bungee Shade', cursive;
+		font-family: Vegur, 'PT Sans', Verdana, Sans-serif;
+	}
+	
+	.cantidad{
+	width: 150px;
+	}
+	
+	.carrito
+	{
+	font-size: 30px;
+	}
+	
+	div {
+	<!-border: 1px dotted blue;
+	}
+	
+	function limpiarFormulario() {
+    document.getElementById("miForm").reset();
+  }

@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!–<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!–<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <!–<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" media="all" href="css/style2.css"/> 
+
+	<title> Mi Tienda</title>
+
+<script type="text/javascript" src="Scripts/funciones.js"></script>
+
+</head>
+
+<body>
+		<header>	
+			<div class="container">
+				<div class= "row"> 
+					<div class="col"> 
+					 <img src="img/usuario.jpg" class="rounded-circle border border-secondary"> 
+					</div>
+				
+					<div  class="col-6  align-self-center text-center"">	
+					<h1 class="ttienda">La Tienda ...</h1>
+					</div >
+					
+					<div class="col carrito"> 
+						<i i class="fas fa-cart-arrow-down"> carrito </i>	
+					</div>
+				</div>
+		</div>
+
+		</header>
+
+			<form id="fmitienda">	
+				<content>	
+					<div class="container">
+						<div class="row no-gutters">
+							<div class="col" >	</div>	
+								<div class="col-4">
+									<input id="valivabasicos" type="hidden" value="19%"/>
+										<div class="row" >
+											<div  class="col" ></div>
+											<h2>Productos Basicos</h2>	
+										</div>
+
+										<div class="row panel-body">
+
+											<ul class="list-unstyled">
+  												<li class="media">
+    												<img class="mr-3" src="img/leche.png" width="45" height="45" alt="Generic placeholder image">
+    												<div class="media-body">
+
+														<div  class="col-6">
+															<label for="leche">Leche:</label>
+														</div>
+														<div  class="col-6">
+							        						<input type="numeric" id="leche" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false"/>
+							        						<input id="oleche" type="hidden" value="2000"/>	
+							        					</div>	
+				        							</div>
+				        						</li>
+				        					</ul>
+				        					
+										</div>
+										<div class="row">
+											<ul class="list-unstyled">
+  												<li class="media">
+    												<img class="mr-3" src="img/pan.png" width="45" height="45" alt="Generic placeholder image">
+    												<div class="media-body">
+														<div  class="col-6">
+		        											<label for="pan">Pan:</label>
+			        									</div>
+			        								<div  class="col-6">
+															<input type="text" id="pan" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false"/>	
+															<input id="opan" type="hidden" value="500"/>
+													</div>
+													</div>
+												</li>
+											</ul>
+
+										</div>
+										<div class="row">
+											<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/huevo.png" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+				        										<label for="huevos">Huevos:</label>
+				        									</div>
+															<div  class="col-6">
+				        										<input type="text" id="huevos" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" />	
+				        										<input id="ohuevos" type="hidden" value="300"/>
+								        					</div>
+							        					</div>
+							        			</li>
+							        		</ul>
+							        	</div>
+			        						
+
+			        					<div class="row">
+			        						<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/subtotal.jpg" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+							        						<div  class="col-6">
+																<label for="subtotal">Subtotal:</label> 
+															</div>
+															<div  class="col-6">
+								        						<input type="text" id="stbasico" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>	
+								        						<input id="ostbasico" type="hidden"/>  
+								        					</div>
+								        				</div>
+								        		</li>
+								        	</ul>
+								        </div>
+												
+										<div class="row">      
+											<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/iva.png" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">						
+																<label for="iva">Iva:</label>
+															</div>
+															<div  class="col-6">
+							        							<input type="text" id="ivabasico" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled />
+							        							<input id="oivabasico" type="hidden" value="19"/>	
+							        						</div>
+														</div>
+												</li>
+											</ul>
+
+										</div>
+									</div>
+
+					
+							<div class="col-2"></div>
+
+							<div class="col-4">
+							
+								<input id="valivaaseo" type="hidden" value="10%"/>
+								<div class="row">
+									<div  class="col">	
+										<h2>Productos Aseo</h2>	
+									</div>
+								</div>
+								<div class="row">
+									<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/jabon.png" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+																<label for="jabon">Jabon:</label>
+															</div>
+															<div  class="col-6">
+							        							<input type="text" id="jabon" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false"/>
+							        							<input id="ojabon" type="hidden" value="1500"/>	
+															</div>
+														</div>
+													</li>
+												</ul>
+								</div>	
+								<div class="row">
+									<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/shampoo.jpg" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+							        							<label for="shampoo">Shampoo:</label>
+							        						</div>
+															<div  class="col-6">
+							        							<input type="text" id="shampoo" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false"/>
+							        							<input id="oshampoo" type="hidden" value="2500"/>		
+							        						</div>
+							        					</div>
+							        				</li>
+							        			</ul>
+	        					</div>
+	        					
+	        					<div class="row">
+	        						<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/crema.png" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+																<label for="crema">Crema:</label>
+															</div>
+															<div  class="col-6">
+							        							<input type="text" id="crema" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false"/>
+							        							<input id="ocrema" type="hidden" value="2000"/>
+							        						</div>
+							        					</div>
+							        				</li>
+							        			</ul>
+	        					</div>
+								
+								<div class="row">
+									<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/subtotal.jpg" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+						        							<label for="subtotal">Subtotal:</label>
+						        							</div>
+						        							<div  class="col-6">
+						        								<input type="text" id="staseo"  value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>
+						        								<input id="staseoo" type="hidden"/>	
+						        							</div>
+						        						</div>
+						        					</li>
+						        				</ul>
+
+								</div>
+								<div class="row">
+									<ul class="list-unstyled">
+  												<li class="media">
+    													<img class="mr-3" src="img/iva.png" width="45" height="45" alt="Generic placeholder image">
+    													<div class="media-body">
+															<div  class="col-6">
+						        								<label for="lvliva">Iva:</label>
+						        							</div>
+															<div  class="col-6">
+						        								<input type="text" id="ivaaseo"  value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>
+						        								<input id="oivaaseo" type="hidden" value="10"/>	
+						        							</div>	
+						        						</div>
+						        				</li>
+						        	</ul>
+								
+								</div>	
+								<div class="col" >	</div>	
+							</div>
+						</div>
+									
+						<div class="col-1"></div>
+					</div>
+					
+					<div class="container">
+
+						<div class= "row">	
+	                     <div class="col col-3">	 </div>
+							<div class="col-3 align-self-center text-center">	
+								<h2>Factura</h2>	
+	        				<!--	<a href="" class="boton1">Calcular </a> -->
+								<button type="button" class="btn btn-primary" onclick="sumarProductosBasicos()">Calcular</button>
+								<button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
+							</div>
+							<div class="col-1"></div>
+							<div class="col col-4">
+								 <div class="row">
+									<ul class="list-unstyled">
+  										<li class="media">
+    										<img class="mr-3" src="img/subtotal.jpg" width="45" height="45" alt="Generic placeholder image">
+    										<div class="media-body">
+											<div  class="col-2">
+												<label for="frasubtotal" class= "label2">SUBTOTAL:</label>
+												<input type="text" id="stfactura" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>	
+											</div>
+											</div>
+						        		</li>
+						        	</ul>
+								  </div>
+								
+								<div class="row">
+									<ul class="list-unstyled">
+										<li class="media">
+											<img class="mr-3" src="img/iva.png" width="45" height="45" alt="Generic placeholder image">
+    										<div class="media-body">
+											<div  class="col-2">
+												<label for="fraiva"  class= "label2">IVA:</label>
+						        				<input type="text" id="ivafactura" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>	
+						        			</div>
+											</div>
+						        		</li>
+						        	</ul>
+									</div>
+								<div class="row">
+									<ul class="list-unstyled">
+  										<li class="media">
+    										<img class="mr-3" src="img/total.png" width="45" height="45" alt="Generic placeholder image">
+    										<div class="media-body">
+											<div  class="col-2">
+												<label for="fratotal"  class= "label2">TOTAL:</label>
+						        				<input type="text" id="total" value="0" minlength="2" maxlength="15" onkeypress="return valida(event)" onpaste="return false" disabled/>
+						        			</div>
+						        			</div>
+						        		</li>
+						        	</ul>
+
+								</div>	
+							</div>
+						</div>	
+					</div>
+               </div>
+			   
+			   
+			   
+			   
+				</content>
+
+				<footer>	
+					<div class="container">
+						<div class= "row"> 
+							<div class="col-xl-auto"> 	
+								<a>	www.mitienda.com</p>
+							</div>
+						</div>
+					</div>
+				</footer>
+		</form>
+			
+</body>
+</html>
